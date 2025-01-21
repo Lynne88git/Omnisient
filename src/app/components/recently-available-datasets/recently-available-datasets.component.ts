@@ -1,12 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-recently-available-datasets',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './recently-available-datasets.component.html',
-  styleUrl: './recently-available-datasets.component.scss'
+  styleUrls: ['./recently-available-datasets.component.scss'],
 })
-export class RecentlyAvailableDatasetsComponent {
+export class RecentlyAvailableDatasetsComponent implements OnInit {
+  recentlyAvailableDatasets: any[] = [];
 
+  constructor(private apiService: ApiService) {}
+
+  ngOnInit() {
+    this.apiService.getRecentlyAvailableDatasets().subscribe((data) => {
+      this.recentlyAvailableDatasets = data;
+    });
+  }
 }

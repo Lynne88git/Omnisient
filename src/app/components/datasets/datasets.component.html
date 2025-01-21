@@ -1,4 +1,8 @@
-<div class="w-[1118px] bg-white rounded-[4px] p-4 ml-[16px] mt-[24px]">
+<div class="w-[1118px] bg-white rounded-[4px] p-4">
+  <!-- Heading -->
+  <p class="px-2 text-md font-semibold text-black mb-4">
+    Datasets Pending Review
+  </p>
   <!-- Table Wrapper -->
   <div class="w-[1086px] rounded-[4px] overflow-hidden border border-grey03">
     <!-- Table -->
@@ -9,7 +13,7 @@
           <th class="py-2 px-4 border-grey03">Dataset Name</th>
           <th class="py-2 px-4 border-grey03">Uploaded By</th>
           <th class="py-2 px-4 border-grey03">Updated</th>
-          <th class="py-2 px-4">Actions</th>
+          <th class="py-2 pr-11 text-right">Actions</th>
         </tr>
       </thead>
       <!-- Table Body -->
@@ -23,11 +27,13 @@
             {{ dataset.uploadedBy }}
           </td>
           <td class="py-2 px-4 text-sm border-grey03">{{ dataset.updated }}</td>
-          <td class="py-2 px-4 text-sm">
+          <td class="py-2 px-6 text-sm text-right">
             <button
-              class="flex items-center gap-2 px-4 py-2 bg-grey01 border-grey03 rounded-md hover:bg-grey02 hover:underline"
+              class="gap-2 px-3 py-1 bg-grey01 border border-grey03 rounded-md hover:bg-grey02"
             >
-              <span class="material-icons-round text-sm">visibility</span>
+              <span class="material-icons-round text-sm ml-auto"
+                >visibility</span
+              >
               {{ dataset.actions }}
             </button>
           </td>

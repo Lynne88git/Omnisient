@@ -1,1 +1,37 @@
-<p>recently-available-datasets works!</p>
+<div
+  class="w-[330px] h-[236px] bg-white border border-grey03 rounded-[7px] p-4"
+>
+  <!-- Heading -->
+  <p class="text-md font-semibold text-black mb-4">
+    Recently Available Datasets
+  </p>
+
+  <!-- Datasets List -->
+  <!-- Table Body -->
+  <tbody class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2">
+    <tr *ngFor="let dataset of recentlyAvailableDatasets" class="contents">
+      <!-- Dataset Name -->
+      <td class="py-2 px-4 text-sm border-grey03">{{ dataset.name }}</td>
+      <!-- Dataset Date -->
+      <td class="py-2 px-4 text-sm border-grey03 text-right">
+        {{ dataset.updated }}
+      </td>
+    </tr>
+  </tbody>
+
+  <!-- Pagination -->
+  <div class="flex justify-end items-center mt-4">
+    <button
+      class="flex items-center justify-between h-[24px] bg-white border border-grey03 rounded-md hover:bg-grey03"
+      aria-label="Pagination"
+    >
+      <span class="material-icons-round text-sm px-2">keyboard_arrow_left</span>
+      <!-- Vertical Line -->
+      <span class="border-l border-grey04 mx-2 h-[24px] w-[0.5px]"></span>
+
+      <span class="material-icons-round text-sm px-2 border-grey03"
+        >keyboard_arrow_right</span
+      >
+    </button>
+  </div>
+</div>
