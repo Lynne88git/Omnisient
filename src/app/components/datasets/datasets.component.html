@@ -1,0 +1,66 @@
+<div class="w-[1118px] bg-white rounded-[4px] p-4 ml-[16px] mt-[24px]">
+  <!-- Table Wrapper -->
+  <div class="w-[1086px] rounded-[4px] overflow-hidden border border-grey03">
+    <!-- Table -->
+    <table class="w-full text-left border-collapse">
+      <!-- Table Header -->
+      <thead>
+        <tr class="bg-grey02 text-black text-sm font-semibold">
+          <th class="py-2 px-4 border-grey03">Dataset Name</th>
+          <th class="py-2 px-4 border-grey03">Uploaded By</th>
+          <th class="py-2 px-4 border-grey03">Updated</th>
+          <th class="py-2 px-4">Actions</th>
+        </tr>
+      </thead>
+      <!-- Table Body -->
+      <tbody>
+        <tr
+          *ngFor="let dataset of datasets"
+          class="hover:bg-grey01 border-b border-grey03 cursor-pointer"
+        >
+          <td class="py-2 px-4 text-sm border-grey03">{{ dataset.name }}</td>
+          <td class="py-2 px-4 text-sm border-grey03">
+            {{ dataset.uploadedBy }}
+          </td>
+          <td class="py-2 px-4 text-sm border-grey03">{{ dataset.updated }}</td>
+          <td class="py-2 px-4 text-sm">
+            <button
+              class="flex items-center gap-2 px-4 py-2 bg-grey01 border-grey03 rounded-md hover:bg-grey02 hover:underline"
+            >
+              <span class="material-icons-round text-sm">visibility</span>
+              {{ dataset.actions }}
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Table Footer -->
+    <div
+      class="flex justify-end items-center bg-white p-4 border-t border-grey03"
+    >
+      <span class="text-sm mr-2">Items per page:</span>
+      <select class="text-sm border border-grey03 h-[24px] px-2 rounded-md">
+        <option value="1">1</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+      </select>
+      <span class="text-sm mx-4">1-1 of 100</span>
+      <!-- Pagination Buttons -->
+      <button
+        class="flex items-center justify-between h-[24px] bg-white border border-grey03 rounded-md hover:bg-grey03"
+        aria-label="Pagination"
+      >
+        <span class="material-icons-round text-sm px-2"
+          >keyboard_arrow_left</span
+        >
+        <!-- Vertical Line -->
+        <span class="border-l border-grey04 mx-2 h-[24px] w-[0.5px]"></span>
+
+        <span class="material-icons-round text-sm px-2 border-grey03"
+          >keyboard_arrow_right</span
+        >
+      </button>
+    </div>
+  </div>
+</div>

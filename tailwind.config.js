@@ -7,6 +7,7 @@ module.exports = {
         sans: ['Poppins', 'sans-serif'],
       },
       fontSize: {
+        titleh2: ['22px', { lineHeight: '33px', fontWeight: '700' }],
         lg: ['22px', { lineHeight: '1.5', fontWeight: 'bold' }],
         md: ['14px', { lineHeight: '1.5', fontWeight: '600' }],
         sm: [

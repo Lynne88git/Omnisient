@@ -1,0 +1,61 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "Jennifer Doe",
+        "messages": 2
+      }
+    ],
+    "categories": [
+      {
+        "name": "Dataset Reviews",
+        "value": 100,
+        "change": -10
+      },
+      {
+        "name": "Failed Uploads",
+        "value": 10,
+        "change": 2
+      },
+      {
+        "name": "Shares by Company",
+        "value": 15,
+        "change": 5
+      }
+    ],
+    "datasets": [
+        {
+        "name": "Dataset 01",
+        "uploadedBy": "Jeanette Edwards",
+        "updated": "2024-09-01",
+        "actions": "View",
+        "pendingReview": true,
+        "recentlyAvailable": true
+        },
+        {
+        "name": "Dataset 02",
+        "uploadedBy": "Melvin Fitzgerald",
+        "updated": "2024-09-17",
+        "actions": "View",
+        "pendingReview": true,
+        "recentlyAvailable": false
+        },
+        {
+        "name": "Dataset 03",
+        "uploadedBy": "Jennifer Doe",
+        "updated": "2024-09-20",
+        "actions": "View",
+        "pendingReview": true,
+        "recentlyAvailable": true
+        },
+        {
+        "name": "Dataset 04",
+        "uploadedBy": "Lulu Morton",
+        "updated": "2024-09-01",
+        "actions": "View",
+        "pendingReview": false,
+        "recentlyAvailable": true
+        }
+    ]
+  }
+  
