@@ -18,4 +18,4 @@ import { environment } from '../environments/environment';
   ],
   exports: [],
 })
-export class AppstoreModule {}
+export class AppStoreModule {}
